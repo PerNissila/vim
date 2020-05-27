@@ -34,6 +34,7 @@ set background=dark
 " key bindings
 let mapleader = " "
 imap jj <Esc>
+imap <C-g> <Esc>
 nmap <leader>gd <Plug>(coc-definitions)
 nmap <leader>gr <Plug>(coc-references)
 nmap <leader>h :wincmd h<CR> 
@@ -41,4 +42,6 @@ nmap <leader>j :wincmd j<CR>
 nmap <leader>k :wincmd k<CR> 
 nmap <leader>l :wincmd l<CR> 
 nmap <leader>w :wincmd w<CR>
+map <C-K> :bprev<CR>
+map <C-J> :bnext<CR>
 nnoremap <C-p> :GFiles<CR>
