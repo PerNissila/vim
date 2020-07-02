@@ -34,14 +34,20 @@ set background=dark
 " key bindings
 let mapleader = " "
 imap jj <Esc>
-imap <C-g> <Esc>
+inoremap <C-g> <Esc>
 nmap <leader>gd <Plug>(coc-definitions)
 nmap <leader>gr <Plug>(coc-references)
 nmap <leader>h :wincmd h<CR> 
 nmap <leader>j :wincmd j<CR> 
 nmap <leader>k :wincmd k<CR> 
 nmap <leader>l :wincmd l<CR> 
+nnoremap <Leader>+ :vertical resize +5<CR>
+nnoremap <Leader>- :vertical resize -5<CR>
 nmap <leader>w :wincmd w<CR>
 map <C-K> :bprev<CR>
 map <C-J> :bnext<CR>
 nnoremap <C-p> :GFiles<CR>
+" make . work on visual selected lines
+vnoremap . :normal.<CR> 
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
